@@ -1,0 +1,531 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI';
+}
+
+body{
+
+background:linear-gradient(#ffeef4,#fff7fb);
+
+overflow-x:hidden;
+
+color:#444;
+
+}
+
+header{
+
+text-align:center;
+
+padding:60px;
+
+}
+
+header h1{
+
+font-size:3rem;
+
+color:#ff5d8f;
+
+animation:pulse 2s infinite;
+
+}
+
+header p{
+
+margin-top:15px;
+
+}
+
+.envelope-section{
+
+display:flex;
+
+justify-content:center;
+
+padding:60px;
+
+}
+
+.envelope{
+
+width:700px;
+
+cursor:pointer;
+
+}
+
+.front{
+
+font-size:120px;
+
+text-align:center;
+
+transition:.5s;
+
+}
+
+.letter{
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+margin-top:20px;
+
+display:none;
+
+animation:fade .8s;
+
+}
+
+.letter p{
+
+margin-top:20px;
+
+line-height:1.8;
+
+font-size:18px;
+
+}
+
+.hidden-note{
+
+text-align:center;
+
+padding:70px;
+
+}
+
+button{
+
+padding:12px 25px;
+
+border:none;
+
+background:#ff8db5;
+
+color:white;
+
+border-radius:40px;
+
+cursor:pointer;
+
+font-size:17px;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+#secret{
+
+margin-top:30px;
+
+display:none;
+
+font-size:23px;
+
+animation:fade .7s;
+
+}
+
+.memories{
+
+padding:70px;
+
+text-align:center;
+
+}
+
+.collage{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.photo{
+
+background:white;
+
+padding:10px;
+
+border-radius:15px;
+
+transform:rotate(-2deg);
+
+transition:.5s;
+
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+width:200px;      /* Change this number */
+
+margin:auto;
+
+}
+
+.photo:nth-child(even){
+
+transform:rotate(3deg);
+
+}
+
+.photo:hover{
+
+transform:scale(1.08) rotate(0deg);
+
+}
+
+.photo img{
+
+width:100%;
+
+height:250px;      /* Change this number */
+
+object-fit:cover;
+
+border-radius:12px;
+
+display:block;
+
+}
+
+.memory-popup{
+
+text-align:center;
+
+padding:80px;
+
+}
+
+#memoryCard{
+
+display:none;
+
+margin-top:30px;
+
+padding:30px;
+
+background:white;
+
+border-radius:20px;
+
+width:500px;
+
+margin-left:auto;
+
+margin-right:auto;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+animation:fade .6s;
+
+}
+
+.heart{
+
+position:fixed;
+
+font-size:20px;
+
+pointer-events:none;
+
+animation:float 2s linear forwards;
+
+}
+
+@keyframes float{
+
+0%{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translateY(-150px) scale(2);
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+}
+/* Responsive */
+
+@media (max-width: 768px){
+
+header{
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:2rem;
+}
+
+.envelope{
+    width:95%;
+}
+
+.letter{
+    padding:25px;
+}
+
+.letter p{
+    font-size:16px;
+}
+
+.collage{
+    grid-template-columns:1fr 1fr;
+}
+
+#memoryCard{
+    width:90%;
+}
+
+}
+
+@media (max-width: 500px){
+
+header h1{
+    font-size:1.7rem;
+}
+
+.collage{
+    grid-template-columns:1fr;
+}
+
+.photo{
+    width:170px;
+    margin:auto;
+}
+
+button{
+    width:100%;
+    max-width:250px;
+}
+
+}
+
+
+.cute-section{
+
+padding:70px 20px;
+
+text-align:center;
+
+}
+
+.cute-section h2{
+
+color:#ff5d8f;
+
+margin-bottom:15px;
+
+}
+
+.cute-section p{
+
+font-size:18px;
+
+margin-bottom:15px;
+
+}
+
+#flowerBox,
+#hugText,
+#giftBox{
+
+margin-top:25px;
+
+font-size:30px;
+
+animation:fade .5s;
+
+line-height:1.6;
+
+}
+
+#heartLevel{
+
+margin-top:25px;
+
+font-size:80px;   /* Increase this */
+
+animation:fade .5s;
+
+line-height:1.2;
+
+}
+
+
+/* Teddy Hug */
+
+.hugContainer{
+
+animation:fade .8s;
+
+margin-top:30px;
+
+}
+
+.teddy{
+
+width:220px;
+
+animation:hugBounce 2s infinite ease-in-out;
+
+}
+
+.hugHearts{
+
+font-size:35px;
+
+margin-top:10px;
+
+animation:floatHearts 2s infinite;
+
+}
+
+.hugMessage{
+
+margin-top:20px;
+
+font-size:20px;
+
+line-height:1.8;
+
+color:#555;
+
+max-width:600px;
+
+margin-left:auto;
+
+margin-right:auto;
+
+}
+
+@keyframes hugBounce{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+@keyframes floatHearts{
+
+0%{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+}
+
+.flower{
+
+position:fixed;
+
+top:-50px;
+
+pointer-events:none;
+
+z-index:9999;
+
+animation:flowerFall linear forwards;
+
+}
+
+@keyframes flowerFall{
+
+0%{
+
+transform:translateY(-50px) rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(110vh) rotate(720deg);
+
+opacity:0.9;
+
+}
+
+}
